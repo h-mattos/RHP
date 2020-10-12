@@ -1,9 +1,10 @@
 dt_summary = function(dt, max_cat = 10, fontSize = 1) {
+  dt = data.table::setDT(dt)
   cols = names(dt)
-  cols_class = unlist(lapply(dt, function(x) first(class(x))))
+  cols_class = unlist(lapply(dt, function(x) data.table::first(class(x))))
   cols = cols[cols_class %in% c('character', 'numeric', 'integer', 'logical', 'factor')]
   cols_class = cols_class[cols_class %in% c('character', 'numeric', 'integer', 'logical', 'factor')]
-  out = data.table(Variable = paste0(cols, '\n[', cols_class, ']'), Stats = character(length(cols)), Freq = character(length(cols)), Valid = character(length(cols)))
+  out = data.table::data.table(Variable = paste0(cols, '\n[', cols_class, ']'), Stats = character(length(cols)), Freq = character(length(cols)), Valid = character(length(cols)))
   pb = txtProgressBar(max = length(cols), style = 3)
   for (col in seq_along(cols)) {
     if (cols_class[col] %in% c('character', 'logical', 'factor')) {
