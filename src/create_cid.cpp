@@ -1,3 +1,4 @@
+
 #include <Rcpp.h>
 using namespace Rcpp;
 
@@ -42,5 +43,5 @@ StringVector create_cid(StringVector tipdoc, StringVector nrodoc) {
 //
 
 // /*** R
-// create_cid(c('DNI','PAS'), c('70506615','123456'))
+// create_cid(c('DNI','PAS'), c('8765321','123456'))
 // */
