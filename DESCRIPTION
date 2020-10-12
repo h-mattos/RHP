@@ -8,8 +8,8 @@ Maintainer: Hector Mattos <hm4tt0s@gmail.com>
 Description: A varied assortment of functions needed for my daily use. Either work related or recreational.
 License: GPL (>= 2)
 Imports:
-  Rcpp (>= 1.0.4)
-  data.table (>= 1.12.8)
-  stringr (>= 1.4.0)
+  Rcpp (>= 1.0.4),
+  data.table (>= 1.12.8),
+  stringr (>= 1.4.0),
   DT (>= 0.15)
 LinkingTo: Rcpp
