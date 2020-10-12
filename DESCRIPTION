@@ -1,11 +1,11 @@
 Package: RHP
 Type: Package
-Title: What the Package Does in One 'Title Case' Line
+Title: Miscellaneous functions for my personal use
 Version: 1.0
 Date: 2020-10-11
-Author: Your Name
-Maintainer: Your Name <your@email.com>
-Description: One paragraph description of what the package does as one or more full sentences.
+Author: Hector Mattos
+Maintainer: Hector Mattos <hm4tt0s@gmail.com>
+Description: A varied assortment of functions needed for my daily use. Either work related or recreational.
 License: GPL (>= 2)
 Imports: Rcpp (>= 1.0.4)
 LinkingTo: Rcpp
