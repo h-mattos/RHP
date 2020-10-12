@@ -17,7 +17,8 @@ StringVector create_cid(StringVector tipdoc, StringVector nrodoc) {
   std::vector<std::string> tipdoc1 = as<std::vector<std::string>>(tipdoc);
   std::vector<std::string> nrodoc1 = as<std::vector<std::string>>(nrodoc);
   if (tipdoc1.size() == nrodoc1.size()) {
-    std::vector<std::string> out(nrodoc1.size());
+    // std::vector<std::string> out(nrodoc1.size());
+    StringVector out(nrodoc1.size());
     for (int i = 0; i < (int) tipdoc1.size(); i++) {
       if (tipdoc1[i] == "DNI") {
         tipdoc1[i] = "D";
