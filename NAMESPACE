@@ -1,3 +1,7 @@
 useDynLib(RHP, .registration=TRUE)
 export('create_cid')
+export('dt_summary')
 importFrom(Rcpp, evalCpp)
+import(data.table)
+import(DT)
+import(stringr)
