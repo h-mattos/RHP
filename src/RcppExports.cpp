@@ -5,6 +5,18 @@
 
 using namespace Rcpp;
 
+// create_cid
+StringVector create_cid(StringVector tipdoc, StringVector nrodoc);
+RcppExport SEXP _RHP_create_cid(SEXP tipdocSEXP, SEXP nrodocSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< StringVector >::type tipdoc(tipdocSEXP);
+    Rcpp::traits::input_parameter< StringVector >::type nrodoc(nrodocSEXP);
+    rcpp_result_gen = Rcpp::wrap(create_cid(tipdoc, nrodoc));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpp_hello_world
 List rcpp_hello_world();
 RcppExport SEXP _RHP_rcpp_hello_world() {
@@ -17,6 +29,7 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
+    {"_RHP_create_cid", (DL_FUNC) &_RHP_create_cid, 2},
     {"_RHP_rcpp_hello_world", (DL_FUNC) &_RHP_rcpp_hello_world, 0},
     {NULL, NULL, 0}
 };
